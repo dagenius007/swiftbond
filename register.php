@@ -55,7 +55,6 @@
 			}
 		}
 		else{
-      echo 'hello';
        //echo "<script>alert('Input email or password')</script>";
 		}
 ?>
