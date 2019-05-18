@@ -1,6 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
-.footer{
-    
+.footer {
+  align-items: center;
+  background: color(white-two);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  .copyright {
+    color: color(dark);
+    font-size: 1.6rem;
+  }
 }

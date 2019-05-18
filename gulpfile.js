@@ -1,5 +1,4 @@
 const autoprefixer = require('autoprefixer');
-const babel = require('gulp-babel');
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const gulp = require('gulp');
@@ -7,7 +6,7 @@ const gutil = require('gulp-util');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const scss = require('postcss-scss');
-const uglify = require('gulp-uglify');
+const webpack = require('webpack-stream');
 
 gulp.task('css', function() {
   gulp
@@ -20,16 +19,15 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
   gulp
-    .src('js/**/*.js')
-    .pipe(babel({ presets: ['@babel/env'] }))
+    .src('js/**/app.js')
+    .pipe(webpack({ mode: 'production' }))
     .pipe(concat('app.js'))
-    .pipe(uglify())
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {
   gulp.watch('sass/**/*.scss', ['css']);
-  gulp.watch('js/**/*.js', ['js']);
+  gulp.watch('js/**/app.js', ['js']);
 });
 
 gulp.task('default', ['css', 'js', 'watch']);
