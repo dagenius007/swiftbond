@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-md nav__bar">
     <div class="container">
 
-      <a class="navbar-brand nav__brand" href="#">
+      <a class="navbar-brand nav__brand" href="index.php">
         <!-- <img src="./dist/img/ei-logo.png" alt="ei logo" /> -->
         Bloom
       </a>
@@ -49,7 +49,7 @@
     </div>
   </nav>
 
-  <div class="main-content">
+  <div class="content">
 
     <div id="home" class="home__banner">
       <div class="container">
@@ -127,11 +127,7 @@
                   <li class="package__features__item">
                     200% Yield
                   </li>
-
-
                 </ul>
-
-
                 <div class="package__actions">
                   <a href="" class="btn btn--lg btn__primary btn--rounded">
                     Get Started
