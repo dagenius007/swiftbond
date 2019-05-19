@@ -14,26 +14,26 @@ function getDBname(){
 }*/
 
 
- function checkdv($admin_id , $no_of_pple){
+function checkdv($admin_id, $no_of_pple)
+{
 
-      $k = 0;
-      $list_to_pay = array();
-     for($j = $admin_id ; $j<=$no_of_pple * 4; $j++){
-         if($admin_id == $j % $no_of_pple){
-           $list_to_pay[++$k] = $j;
-           //echo  $list_to_pay[$k] . " ";
-        }
-        elseif($admin_id==$no_of_pple && 0==$j%$no_of_pple){
-          $list_to_pay[++$k] = $j;
-          //echo  $list_to_pay[$k] . " ";
-        }
-      }
+  $k = 0;
+  $list_to_pay = array();
+  for ($j = $admin_id; $j <= $no_of_pple * 4; $j++) {
+    if ($admin_id == $j % $no_of_pple) {
+      $list_to_pay[++$k] = $j;
+      //echo  $list_to_pay[$k] . " ";
+    } elseif ($admin_id == $no_of_pple && 0 == $j % $no_of_pple) {
+      $list_to_pay[++$k] = $j;
+      //echo  $list_to_pay[$k] . " ";
+    }
+  }
 
 
-   return $list_to_pay;
- }
+  return $list_to_pay;
+}
 
- /*function echoPayList($reg_id , $db){
+/*function echoPayList($reg_id , $db){
     $list_to_pay = array();
     $list_to_pay = pair4($reg_id);
     for ($i=0; $i < count($list_to_pay) ; $i++) {
@@ -43,9 +43,9 @@ function getDBname(){
  }*/
 
 
- function pair2(){
-        $q2 = "select * from " . $dbname . "LIMIT  2 " ;
-      $result =$conn->query($q2);
-      return $result;
- }
-?>
+function pair2()
+{
+  $q2 = "select * from " . $dbname . "LIMIT  2 ";
+  $result = $conn->query($q2);
+  return $result;
+}

@@ -52,7 +52,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])) {
   <div class="content">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-8 col-sm-10 col-11 col-lg-7">
+        <div class="col-md-8 col-sm-10 col-12 col-lg-7">
           <div class="card auth__card with-logo">
             <h3 class="card__title">
               Sign into Bloom

@@ -6,12 +6,17 @@
   }
 
   &__field {
-    &:not(textarea) {
-      height: 5rem;
-    }
     color: color(dark);
     font-size: 1.4rem;
     padding: 1rem 2rem;
+    &:not(textarea) {
+      height: 5rem;
+
+      @include respond('xs'){
+        height: 4rem;
+        font-size: 1.2rem;
+      }
+    }
 
     &:focus {
       border-color: transparent;

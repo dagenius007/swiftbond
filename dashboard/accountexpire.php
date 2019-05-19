@@ -120,7 +120,7 @@ if ($result->num_rows > 0) {
 		}
 	}
 } else {
-	echo '<span style="color:darkred;font-size:60px;font-family:calibri">Your account has been blocked</span>';
+	echo '<span style="color:darkred;font-size:60px;">Your account has been blocked</span>';
 }
 session_unset();
 session_destroy();
