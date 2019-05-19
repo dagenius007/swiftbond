@@ -45,8 +45,7 @@ if (isset($_POST['email']) && isset($_POST['pwd'])) {
     <div class="container">
 
       <a class="navbar-brand nav__brand" href="index.php">
-        <!-- <img src="./dist/img/ei-logo.png" alt="ei logo" /> -->
-        Bloom
+        <img src="img/bloom.png" alt="bloom logo" />
       </a>
     </div>
   </nav>

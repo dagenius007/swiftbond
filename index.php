@@ -16,8 +16,7 @@
     <div class="container">
 
       <a class="navbar-brand nav__brand" href="index.php">
-        <!-- <img src="./dist/img/ei-logo.png" alt="ei logo" /> -->
-        Bloom
+        <img src="img/bloom.png" alt="bloom logo" />
       </a>
       <button class="navbar-toggler nav__toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon nav__toggler__icon"></span>
