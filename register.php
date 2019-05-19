@@ -24,9 +24,9 @@ if (isset($_POST['email']) && isset($_POST['password1'])) {
       } else {
 
         require('connectdb.ext');
-        $sql = "INSERT INTO `users`(`firstname`, `lastname`, `email`, `password`, `package`, `plan`, `acno`, `bankname`, `accname`, `phone`)
+        $sql = "INSERT INTO `users`(`firstname`, `lastname`, `email`, `password`, `package`, `plan`, `acno`, `bankname`, `accname`, `phone`, `acctype`)
 						VALUES ('" . $_POST['fname'] . "', '" . $_POST['lname'] . "','" . $_POST['email'] . "','" . $_POST['password1'] . "',
-						'" . $_POST['package'] . "', '" . $_POST['plan'] . "', '" . $_POST['accno'] . "','" . $_POST['bank'] . "','" . $_POST['accname'] . "','" . $_POST['phone'] . "')";
+						'" . $_POST['package'] . "', '" . $_POST['plan'] . "', '" . $_POST['accno'] . "','" . $_POST['bank'] . "','" . $_POST['accname'] . "','" . $_POST['phone'] . "','" . $_POST['acctype'] . "')";
 
         if ($conn->query($sql) === TRUE) {
 
@@ -109,6 +109,13 @@ if (isset($_POST['email']) && isset($_POST['password1'])) {
                 <input placeholder="Account Number" name="accno" class="form-control form__field" type="text" required>
               </div>
 
+              <div class="form__group">
+                <select name="acctype" class="form-control form__field" required>
+                  <option value="" selected disabled>Savings or Current</option>
+                  <option value="savings">Savings</option>
+                  <option value="current">Current</option>
+                </select>
+              </div>
               <hr>
 
               <div class="form__group">
@@ -119,14 +126,6 @@ if (isset($_POST['email']) && isset($_POST['password1'])) {
                 <input placeholder="Confirm Password" name="password2" class="form-control form__field" type="password" required>
               </div>
 
-
-              <div class="form__group">
-                <select name="acctype" class="form-control form__field" required>
-                  <option value="" selected disabled>Savings or Current</option>
-                  <option value="savings">Savings</option>
-                  <option value="current">Current</option>
-                </select>
-              </div>
 
               <div class="form__group">
                 <select name="package" class="form-control form__field" required>
