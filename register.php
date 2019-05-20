@@ -144,13 +144,7 @@
 
                 <form action="register.php" method="post" class="rform">
 
-
-
-
-
                   <div class="row">
-
-
 
                   <div class="col-md-6">
 
