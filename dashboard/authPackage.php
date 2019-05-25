@@ -1,36 +1,33 @@
 <?php
 session_start();
-if($_SESSION['package']!=""){
+if ($_SESSION['package'] != "") {
 	header("Location:index.php");
 	exit;
 }
-	if (isset($_GET['package']) && isset($_SESSION['email']) && isset($_SESSION['fname']) && $_SESSION['package']=="") {
-		require('connectdb.ext');
-		if ($_GET['package']=="5k") {
-			$p="5k";
-			$pt="a";
-		}
-		else if ($_GET['package']=="10k") {
-			$p="10k";
-			$pt="b";
-		}
-		else if ($_GET['package']=="20k") {
-			$p="20k";
-			$pt="c";
-		}
-		else{
-			header("Location:selectPackage.php");
-			exit;
-		}
+if (isset($_GET['package']) && isset($_SESSION['email']) && isset($_SESSION['fname']) && $_SESSION['package'] == "") {
+	require('connectdb.ext');
+	if ($_GET['package'] == "5k") {
+		$p = "5k";
+		$pt = "a";
+	} else if ($_GET['package'] == "10k") {
+		$p = "10k";
+		$pt = "b";
+	} else if ($_GET['package'] == "20k") {
+		$p = "20k";
+		$pt = "c";
+	} else {
+		header("Location:selectPackage.php");
+		exit;
+	}
 
 
-			$sql = "UPDATE `users` SET `package`='".$p."' WHERE `email` = '".$_SESSION['email']."'";
+	$sql = "UPDATE `users` SET `package`='" . $p . "' WHERE `email` = '" . $_SESSION['email'] . "'";
 
-			if ($conn->query($sql) === TRUE) {
-    		$_SESSION['package']=$p;
+	if ($conn->query($sql) === TRUE) {
+		$_SESSION['package'] = $p;
 
-    		//Upline Retrieval
-/*
+		//Upline Retrieval
+		/*
     		require('connectdb.ext');
     		$sql = 'SELECT * FROM `users` WHERE `package` = "'.$p.'" and `bankname` != "" and (`dpay1` = "" or `dpay2` = "")';
     		$result = $conn->query($sql);
@@ -81,24 +78,13 @@ if($_SESSION['package']!=""){
     		header("Location:settings.php?n=pkgscss&p=".$pt);
 
     */
-			}
+	} else {
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
 
-
-			else {
-   				 echo "Error: " . $sql . "<br>" . $conn->error;
-			}
-
-			header("Location:settings.php?n=pkgscss&p=".$pt);
-			$conn->close();
-
-		}
-		else{
-			header("Location:selectPackage.php");
-			exit;
-		}
-
-
-
-
-
-?>
+	header("Location:settings.php?n=pkgscss&p=" . $pt);
+	$conn->close();
+} else {
+	header("Location:selectPackage.php");
+	exit;
+}

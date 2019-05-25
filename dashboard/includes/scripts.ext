@@ -1,0 +1,14 @@
+
+  <footer class="footer">
+    <div class="container">
+      <div class="copyright">
+        <p>&copy; Bloom 2019. All Rights Reserved.</p>
+      </div>
+
+      <div class="social">
+
+      </div>
+    </div>
+  </footer>
+
+<script src="../dist/app.js"></script>

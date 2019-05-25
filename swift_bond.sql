@@ -3,12 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: May 02, 2019 at 04:22 PM
+-- Generation Time: May 25, 2019 at 08:52 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.1.12
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET SQL_MODE
+= "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone
+= "+00:00";
 
 --
 -- Database: `swift`
@@ -20,7 +22,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `users`
+(
   `firstname` text NOT NULL,
   `lastname` text NOT NULL,
   `email` text NOT NULL,
@@ -48,5 +51,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`firstname`, `lastname`, `email`, `password`, `package`, `plan`, `upay`, `dpay1`, `dpay2`, `dpay3`, `dpay4`, `acno`, `bankname`, `accname`, `phone`, `upayv`, `dpay1v`, `dpay2v`, `dpay3v`, `dpay4v`, `acctype`) VALUES
-('Joshua', 'Samuel', 'joshuaoluikpe@gmail.com', 'kidkid007', '2k', '2', '', '', '', NULL, NULL, '433', 'Access', 'Joshua Oluikpe', '08103737002', '', '', '', '', '', '');
+INSERT INTO `users` (`firstname`,
+`lastname`, `email`, `password`, `package`, `plan`, `upay`, `dpay1`, `dpay2`, `dpay3`, `dpay4`, `acno`, `bankname`, `accname`, `phone`, `upayv`, `dpay1v`, `dpay2v`, `dpay3v`, `dpay4v`, `acctype`) VALUES
+('Joshua', 'Samuel', 'joshuaoluikpe@gmail.com', 'kidkid007', '2k', '2', '', '', '', NULL, NULL, '433', 'Access', 'Joshua Oluikpe', '08103737002', '11', '', '', '', '', ''),
+('Jo', 'Sho', 'joshua@astract.com', 'kidkid', '2k', '2', '', '', '', NULL, NULL, '0167805509', 'Access', 'Joshua Oluikpe', '08103737003', '', '', '', '', '', 'savings');

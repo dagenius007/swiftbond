@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.home {
+  scroll-behavior: smooth;
+  &__banner {
+    padding: 10rem 0;
+    .banner {
+      &__title {
+        font-size: 5rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+      }
+      &__subtitle {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+      }
+      &__img {
+        max-height: 35rem;
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+
+  .section {
+    padding-bottom: 5rem;
+    padding-top: 10rem;
+
+    &__title {
+      color: color(primary);
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+
+      &.white {
+        color: color(white);
+      }
+
+      &.dark {
+        color: color(dark);
+      }
+    }
+
+    &.about {
+      background-color: color(primary);
+      background-image: url('../img/wave.svg');
+      background-position-x: left;
+      background-position-y: -0.5rem;
+      background-repeat: no-repeat;
+    }
+
+    &.packages {
+      background-color: color(white);
+      background-image: url('../img/wave-p.svg');
+      background-position-x: left;
+      background-position-y: -0.5rem;
+      background-repeat: no-repeat;
+    }
+
+    &.contact {
+      background-color: color(white-two);
+      background-image: url('../img/wave.svg');
+      background-position-x: left;
+      background-position-y: -0.5rem;
+      background-repeat: no-repeat;
+    }
+  }
+}

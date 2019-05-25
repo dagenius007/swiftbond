@@ -1,0 +1,18 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  .page {
+    &__header {
+      margin: 2rem 0;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+  }
+
+  footer.footer {
+    margin-top: auto;
+  }
+}

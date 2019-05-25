@@ -1,0 +1,67 @@
+.auth {
+  background: color(white-two);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  &__card {
+    margin-top: 10rem;
+    background-color: color(white);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    padding: 5rem 3rem 2rem 3rem;
+    margin-bottom: 20px;
+    position: relative;
+
+
+    @include respond('xs'){
+      padding: 5rem 1rem 1rem 1rem;
+    }
+
+    &.with-logo {
+      &::before {
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        background-color: color(white);
+        background-image: url('https://picsum.photos/30');
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        content: ' ';
+        display: block;
+        height: 5rem;
+        left: 50%;
+        margin: 0 auto;
+        object-fit: contain;
+        position: absolute;
+        top: -2.5rem;
+        transform: translateX(-50%);
+        width: 5rem;
+      }
+    }
+    .card__title {
+      font-size: 3.6rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      @include respond('xs'){
+        font-size: 2rem;
+      }
+    }
+
+    .card__link {
+      text-align: center;
+      font-size: 1.4rem;
+      color: color(primary);
+      text-decoration: underline;
+      margin-bottom: 0;
+      //   margin-top: 2rem;
+
+      a {
+        color: color(primary);
+      }
+    }
+  }
+}
